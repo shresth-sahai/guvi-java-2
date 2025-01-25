@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         // if(condition){ }
@@ -44,37 +46,51 @@ public class Main {
 //        }
 // switch  -> control flow statement
 //        switch (expression):
-        int day =2;
-        switch (day){
-            case 1:
-                System.out.println("Monday");
-                break;
-            case 2:
-                System.out.println("Tuesday");
-                break;
-            case 3:
-                System.out.println("Wednesday");
-                break;
-            default:
-                System.out.println("Invalid Day");
-        }
-    char grade='A';
-        switch (grade){
-            case 'A':
-            case 'B':
-                System.out.println("Good");
-                break;
-            case 'C':
-            case 'D':
-                System.out.println("Poor");break;
+//        int day =2;
+//        switch (day){
+//            case 1:
+//                System.out.println("Monday");
+//                break;
+//            case 2:
+//                System.out.println("Tuesday");
+//                break;
+//            case 3:
+//                System.out.println("Wednesday");
+//                break;
+//            default:
+//                System.out.println("Invalid Day");
+//        }
+//    char grade='A';
+//        switch (grade){
+//            case 'A':
+//            case 'B':
+//                System.out.println("Good");
+//                break;
+//            case 'C':
+//            case 'D':
+//                System.out.println("Poor");break;
+//
+//        }
+//
+//        // short hand
+//        int aa=1;
+//        String result = (aa==1)?"True":"False";
 
-        }
 
-        // short hand
-        int aa=1;
-        String result = (aa==1)?"True":"False";
+        Scanner scanner=new Scanner(System.in);
+        int age=scanner.nextInt();
+        String cz=scanner.next();
+        if(cz=="yes"){
+            if(age>=18) System.out.println("Can Vote");
+            else if (age >=16 ) System.out.println("Pre Vote");
+            else System.out.println("Cannot Vote");
+        }
+        else System.out.println("cz is required");
+        scanner.close();
+
 
     }
+
 }
 // type of conditional statements ->
 // if ->
