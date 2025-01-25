@@ -70,6 +70,10 @@ public class Main {
 
         }
 
+        // short hand
+        int aa=1;
+        String result = (aa==1)?"True":"False";
+
     }
 }
 // type of conditional statements ->
