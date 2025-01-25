@@ -167,7 +167,13 @@ else System.out.println("cz is required");
 scanner.close();
     }
      */
+// loops -> get rid of repeatition
+    // for(initialization;condition check;move frwd){}
 
+    // while(condition) { }
+
+    // do {
+//} while()
 
 
 
