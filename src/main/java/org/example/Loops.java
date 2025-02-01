@@ -66,9 +66,8 @@ Write a program that checks whether a given number n is prime or not.
 
 ✅ Test Cases:
 
-mathematica
-Copy
-Edit
+
+
 Input: 7
 Expected Output: Prime
 
@@ -94,9 +93,7 @@ Write a program that counts the number of digits in a given number.
 
 ✅ Test Cases:
 
-yaml
-Copy
-Edit
+
 Input: 12345
 Expected Output: 5
 
