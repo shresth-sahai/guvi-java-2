@@ -87,24 +87,34 @@ public class Main {
 //        }
 //        else System.out.println("cz is required");
 //        scanner.close();
-        for(int i=0;i<5;i++){
+//        for(int i=0;i<5;i++){
+//
+//        }
+//        int a=5;
+//        while(a<5){
+//
+//        }
+//
+//        int j=8;
+//        do {
+//            j++;
+//        }
+//        while(j<=7);
+//
+//
+//
+//
+//    }
 
-        }
-        int a=5;
-        while(a<5){
-
-        }
-
-        int j=8;
-        do {
-            j++;
-        }
-        while(j<=7);
-
-
-
-
-    }
+        // Print Numbers from 10 to 50 using For Loop and While Loop
+        //Check if a Number is Positive or Negative
+        //Reverse a Given Number using Loops
+        //Find the Smallest Number Among Three Numbers
+        //Write a Java program that takes the purchase amount as input and calculates the final payable amount after applying the discount.
+        //
+        //If the purchase amount is less than 500, no discount is applied.
+        //If the purchase amount is between 500 and 1000, a 10% discount is applied.
+        //If the purchase amount is greater than 1000, a 20% discount is applied.
 
 }
 // type of conditional statements ->
