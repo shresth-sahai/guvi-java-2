@@ -66,6 +66,24 @@ Write a program that checks whether a given number n is prime or not.
 
 ✅ Test Cases:
 
+10 -> 2,5 ,10,1
+
+7 -> no
+3
+8
+1 ->1
+2 -> 1,2
+3 ->1,3
+4 ->1,2,4
+5-> 1,5
+6 -> 1,2 ,3,6
+7->1,7
+8-> 1,2,4,8
+12 -> 1,2,3,4,6,12 not prime
+13->1,13 prime number
+
+
+range (1, number itself)
 
 
 Input: 7
@@ -73,17 +91,36 @@ Expected Output: Prime
 
 Input: 10
 Expected Output: Not Prime
+
+
+
+
+
+
 8️⃣ Fibonacci Series up to n Terms
 Problem:
 Write a program that prints the Fibonacci series up to n terms.
 
 ✅ Test Cases:
 
-yaml
-Copy
-Edit
-Input: 5
-Expected Output: 0 1 1 2 3
+Input: 5         a b
+Expected Output: 0 1 1 2 3 5 8 13 ......
+int a=0 , b=1
+print(a)
+print (b);
+for(int i=2;i<n;i++) {
+
+int next =a+b;
+print(next)
+a=b
+b=next;
+}
+
+
+
+
+
+
 
 Input: 8
 Expected Output: 0 1 1 2 3 5 8 13
@@ -99,6 +136,21 @@ Expected Output: 5
 
 Input: 987654321
 Expected Output: 9
+int count=0;
+
+    while(n!=0){
+    int digit =n%10;
+   count++;
+   n=n/10;
+    }
+
+    Math.pow(2,3) -> 2^3 -> 8
+ A positive integer is called an Armstrong number of order n if
+
+abcd... = an + bn + cn + dn + ...
+In case of an Armstrong number of 3 digits, the sum of cubes of each digits is equal to the number itself. For example:
+
+153 = 1*1*1 + 5*5*5 + 3*3*3  // 153 is an Armstrong number.
  */
 //
 //
