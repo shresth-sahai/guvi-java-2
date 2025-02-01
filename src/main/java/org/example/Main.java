@@ -116,6 +116,70 @@ public class Main {
         //If the purchase amount is between 500 and 1000, a 10% discount is applied.
         //If the purchase amount is greater than 1000, a 20% discount is applied.
 
+        // reverse  123 ->  321   123%10-> 3   12%10=2    1 --> 0
+        // 123 -> 12 - > 1 123 / 10 = 12
+//        int n=123;int rev=0;
+//        while(n!=0){
+//            int digit = n%10; // extracting the last digit
+//            rev=rev*10+digit; //a appending digit to rev
+//            n=n/10; // removing the last
+//        }
+//        System.out.println(rev);
+        /*
+        dry run ->
+        123    digit -> 3     rev = 0*10+3 = 3     n=123/10 =12
+        12      2             rev = 3*10+2 = 32    n =1
+        1       1            rev=32*10+1           n=0
+        321
+
+        *
+        **
+        ***
+        ****
+        *****
+
+        *****
+        ****
+        ***
+        **
+        *
+
+            * 4 space + *
+           ** 3 space + 2 stars
+          ***
+         ****
+        *****
+
+
+         */
+//        int n = 5;
+//        for (int i = 1; i <= 5; i++) {
+//            for (int j = 1; j <= i; i++) {
+//                System.out.println("*");
+//            }
+//            System.out.println();
+//        }
+//        int n = 5;
+//        for (int i = 5; i >=1; i--) {
+//            for (int j = 1; j <=i; j++) {
+//                System.out.println("*");
+//            }
+//            System.out.println();
+//        }
+// *****    **** *** ** *
+    int n=5;
+    for(int i=1;i<=n;i++){
+        for(int j=1; ; j++){
+            System.out.print(" ");
+        }
+        for(int j=1;j<= ;j++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+
+
+    }
 }
 // type of conditional statements ->
 // if ->

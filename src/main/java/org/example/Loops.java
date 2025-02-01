@@ -57,5 +57,51 @@
 //// 1 2 skipping out 4 5
 //
 //
+
+/*
+
+Check if a Number is Prime
+Problem:
+Write a program that checks whether a given number n is prime or not.
+
+✅ Test Cases:
+
+mathematica
+Copy
+Edit
+Input: 7
+Expected Output: Prime
+
+Input: 10
+Expected Output: Not Prime
+8️⃣ Fibonacci Series up to n Terms
+Problem:
+Write a program that prints the Fibonacci series up to n terms.
+
+✅ Test Cases:
+
+yaml
+Copy
+Edit
+Input: 5
+Expected Output: 0 1 1 2 3
+
+Input: 8
+Expected Output: 0 1 1 2 3 5 8 13
+9️⃣ Count the Number of Digits in a Number
+Problem:
+Write a program that counts the number of digits in a given number.
+
+✅ Test Cases:
+
+yaml
+Copy
+Edit
+Input: 12345
+Expected Output: 5
+
+Input: 987654321
+Expected Output: 9
+ */
 //
 //
