@@ -82,8 +82,36 @@ int a[]={1,2,3};
 //    print(a[i]);
 //    }
     // min /max
-int[] arr = {4, 2, 1, 2, 4, 3, 3};
+//int[] arr = {4, 2, 1, 2, 4, 3, 3};
 // -> output array without duplicates -> 4 2 1 3 -> 1 2 3 4
+    // nested loops -> inner loop will execute fully
+Scanner scanner=new Scanner(System.in);
+int size= scanner.nextInt();
+int [] arr=new int[size];
+for(int i=0;i<size;i++){
+    arr[i]=scanner.nextInt();
+    }
+int [] temp=new int[size];
+int newSize=0;
+
+for(int i=0;i<size;i++){
+    boolean isDuplicate=false;
+    for(int j=0;j<newSize;j++){
+        if(arr[i]==temp[j]){
+            isDuplicate=true;
+            break;
+        }
+    }
+    if(!isDuplicate){
+        temp[newSize]=arr[i];
+        newSize++;
+    }
+//    for(int i=0;i<newSize;i++){
+//        print(temp[i])
+//    }
+    }
+
+
 
 
 
