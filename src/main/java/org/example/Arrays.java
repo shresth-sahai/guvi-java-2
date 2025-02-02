@@ -1,33 +1,89 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class Arrays {
-    // array is data structure -> fized size elements are of same type
-    int [] arr={1,2,3,4,5};
-    int[][] matrix={{1,2,3},{4,5,6}};// 2 d array
-    /*
+    // array is data structure -> fixed size elements are of same type
+//    int [] arr={1,2,3,4,5};
+//    int[][] matrix={{1,2,3},{4,5,6}};// 2 d array
+//    /*
+//
+//    1,2,3,4,5
+//    0 1 2 4 5
+//    arr[0] -> 1
+//    arr[1] = 2
+    // 1 2 3
+    // 4 5 6
+//
+//
+//     */
+//    // jagged array -> each row has diff no of cols
+//    int[][] matrix1={{1,2,},{4,5,6},{7}};
+//    int [] arr1;
+//    arr1=new int[5];
+//    arr1[0]=12;
+//    arr1[1]=13;
+//
+//
+//    int [][] m=new int[3][3];
+//    m[0][0]=1;
+//
+//    int [][] j =new int[3][];
+//
+//    j[0]=new int[2];
+//    j[1]=new int[4];
 
-    1,2,3,4,5
-    0 1 2 4 5
-    arr[0] -> 1
-    arr[1] = 2
+    
+    // p1 -> [1,2,3] -> index =1  , new value -> user
+// [1,newValue,2,3] -> print
 
+//    Scanner scanner=new Scanner(System.in);
+//    int size=scanner.nextInt();
+//    int[] arr=new int[size];
+//    for(int i=0;i<size;i++){
+//        arr[i]=scanner.nextInt();
+//    }
+//    int index=scanner.nextInt();
+//
+//    if(index<0 && index>size){
+//        return;
+//    }
+//    int newValue=scanner.nextInt();
+//    int newArr[]=new int[size+1];
+//    /* [1,2,3] , 5
+//    index = 1 i=0
+//              [ 1  5 2 3  ]
+//     */
+//
+//
+//    for(int i=0;i<index;i++){
+//        newArr[i]=arr[i];
+//    }
+//    newArr[index]=newValue;
+//
+//    for(int i=index;i<size;i++){
+//        newArr[i+1]=arr[i];
+//    }
+//
+//scanner.close();
 
-     */
-    // jagged array -> each row has diff no of cols
-    int[][] matrix1={{1,2,},{4,5,6},{7}};
-    int [] arr1;
-    arr1=new int[5];
-    arr1[0]=12;
-    arr1[1]=13;
+    //Reverse an Array [1,2,3]  [3,2,1]
 
-
-    int [][] m=new int[3][3];
-    m[0][0]=1;
-
-    int [][] j =new int[3][];
-
-    j[0]=new int[2];
-    j[1]=new int[4];
+//    int a[]={1,2,3};
+//    int []b=new int[3];
+//    for(int i=3;i>=0;i--){
+//        b
+//    }
+    // 1 2 3
+    // 0 1 2    arr[0]=1 arr[1] =2 arr[2] =3
+    // 3 2 1
+int a[]={1,2,3};
+//for(int i=a.length-1;i>=0;i--){
+//    print(a[i]);
+//    }
+    // min /max
+int[] arr = {4, 2, 1, 2, 4, 3, 3};
+// -> output array without duplicates -> 4 2 1 3 -> 1 2 3 4
 
 
 
