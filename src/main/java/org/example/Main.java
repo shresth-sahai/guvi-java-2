@@ -1,7 +1,9 @@
 package org.example;
 
 import java.util.Scanner;
-
+//--- heap
+// int [] a= new int[5] -> heap -> refernece stack
+// by deafult 0 are stored
 public class Main {
     public static void main(String[] args) {
         // if(condition){ }
