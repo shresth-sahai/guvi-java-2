@@ -39,7 +39,7 @@ System.out.println(str.matches("TEST"));
 What is the output of the following code?
 
 String str = "hello";
-String str2 = str.toUpperCase();
+String str2 = str.toUpperCase(); // always creates a new string object
 System.out.println(str == str2);
 A) true
 B) false
@@ -53,6 +53,8 @@ String str = "Java";
 str = str.substring(0, 2) + " Programming";
 System.out.println(str);
 
+// Ja Programming
+
 
 
 What will be the output of the following code?
@@ -63,33 +65,28 @@ String str4 = str1.concat(str3);
 System.out.println(str4);
 
 
-Which of the following statements is true about the String class in Java?
-A) Strings are mutable, so they can be changed after creation.
-B) String objects are stored in heap memory only.
-C) The String class implements both Serializable and Comparable interfaces.
-D) The + operator cannot be used for string concatenation in Java.
-
 output
 String str1 = "hello";
 String str2 = new String("hello");
 String str3 = "hello";
 System.out.println(str1 == str2);
 System.out.println(str1 == str3);
+
 output
 String str = "hello world";
 str = str.replaceFirst("world", "Java");
-System.out.println(str);
+System.out.println(str); // hello java
 
 output
 String str = "abc";
 String str2 = str.toUpperCase();
 str = str.concat("def");
-System.out.println(str2);
+System.out.println(str2); // ABC
 
 
 String str1 = "hello";
 String str2 = "world";
-str1 = str1 + str2;
+str1 = str1 + str2; // + -> cretaes new string obejct each time
 str2 = str2 + str1;
 System.out.println(str1);
 System.out.println(str2);
@@ -99,9 +96,17 @@ C) hello world, worldhello worldhello
 D) hello world, hello worldhello
 
 String str = "Hello";
+String str2 = "Hello";
+
+String str = "Hello";
 String str2 = "hello";
-System.out.println(str.equals(str2));
+
+System.out.println(str.equals(str2)); // actual content+ case sensitive
 System.out.println(str == str2);
+
+// equals -> check fr the actual content
+// == -> reference pointers same memory location
+
 A) true, true
 B) true, false
 C) false, true
@@ -123,6 +128,8 @@ A) X2345
 B) XX345
 C) 12345
 D) X345
+
+XX345
 
 String str1 = new String("abc");
 String str2 = new String("abc");
