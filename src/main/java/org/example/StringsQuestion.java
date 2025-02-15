@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class StringsQuestion {
     /*
      String str1 = "abc";
@@ -177,5 +179,50 @@ Input: "listen", "silent" Output: true
 
 
      */
+String str="hi";
+    StringBuilder reversed=new StringBuilder(str);
+
+//    return reversed.reverse().toString();
+    // palindromne-> str ->
+    // str.equals(reverse)
+
+    //
+
+//    int v=0, c=0;
+//    str=str.toLowerCase();
+//    for(int i=0;i<str.length();i++){
+//        char ch=str.charAt(i);
+//        if(ch=='a'|| ch=='e' || ch=='i' || ch=='o' || ch=='u'){
+//            v++;
+//        }
+//        else{
+//            c++;
+//        }
+//    }
+//
+
+    // anagram -> 1 size of both should be same
+//    String a1="god"; String a2="dog";String b1="abc123";
+//    if(a1.length()!=a2.length()) return false;
+
+//    char[] arr1=a1.toCharArray();
+//    int [] a={1,2,34};
+//
+//    char[] arr2=a2.toCharArray();
+//
+//    Arrays.sort(arr1);
+//    Arrays.sort(arr2);
+//    boolean ans= Arrays.equals(arr1,arr2);
+
+//    string b11="abc321";
+//    char[] charArray=b11.toCharArray();
+//    for(char ch:charArray){
+//        System.out.println(ch));
+//    }
+//
+//    Arrays.sort(charArray); // sort on basis of unicode values
+    // 1 2 have lower values
+    // a b c
+    // 1 2 3 a b c
 
 }

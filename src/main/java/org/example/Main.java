@@ -1,11 +1,13 @@
 package org.example;
 
-import java.util.Scanner;
-//--- heap
-// int [] a= new int[5] -> heap -> refernece stack
-// by deafult 0 are stored
+import java.util.Arrays;
+
+
 public class Main {
     public static void main(String[] args) {
+        //--- heap
+// int [] a= new int[5] -> heap -> refernece stack
+// by deafult 0 are stored
         // if(condition){ }
 //        int age=10;
 //        if(age == 10 )
@@ -264,6 +266,15 @@ String ss="Hi";
         System.out.println(str1 == str3); //false
 //        System.out.println(str1 == str4);//true
         System.out.println(str2 == str4); //true
+
+
+        String b111="abc123";
+        char [] c=b111.toCharArray();
+        Arrays.sort(c);
+
+        for(char ch:c){
+            System.out.println(ch);
+        }
 
     }
 }
