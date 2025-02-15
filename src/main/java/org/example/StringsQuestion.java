@@ -86,6 +86,55 @@ String str2 = str.toUpperCase();
 str = str.concat("def");
 System.out.println(str2);
 
+
+String str1 = "hello";
+String str2 = "world";
+str1 = str1 + str2;
+str2 = str2 + str1;
+System.out.println(str1);
+System.out.println(str2);
+A) hello world, world hello world
+B) hello world, worldhello world
+C) hello world, worldhello worldhello
+D) hello world, hello worldhello
+
+String str = "Hello";
+String str2 = "hello";
+System.out.println(str.equals(str2));
+System.out.println(str == str2);
+A) true, true
+B) true, false
+C) false, true
+D) false, false
+
+String str = "abc";
+String str2 = "ABC";
+System.out.println(str.equalsIgnoreCase(str2));
+System.out.println(str == str2);
+A) true, true
+B) true, false
+C) false, true
+D) false, false
+
+String str = "12345";
+str = str.replaceAll("[1-3]", "X");
+System.out.println(str);
+A) X2345
+B) XX345
+C) 12345
+D) X345
+
+String str1 = new String("abc");
+String str2 = new String("abc");
+System.out.println(str1.equals(str2));
+System.out.println(str1 == str2);
+A) true, true
+B) true, false
+C) false, true
+D) false, false
+
+
+
      */
 
 }
