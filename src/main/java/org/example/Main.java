@@ -254,15 +254,15 @@ String ss="Hi";
         String ff=new String("Hi").intern();// adds to string pool
         System.out.println(ss==ff); //true
 
-        String str1 = "hello";
+//        String str1 = "hello";
         String str2 = "hello";
         String str3 = new String("hello");
         String str4 = str3.intern();
 
         // Memory representation
-        System.out.println(str1 == str2); // true
+//        System.out.println(str1 == str2); // true
         System.out.println(str1 == str3); //false
-        System.out.println(str1 == str4);//true
+//        System.out.println(str1 == str4);//true
         System.out.println(str2 == str4); //true
 
     }

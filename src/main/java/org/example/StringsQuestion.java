@@ -141,6 +141,40 @@ C) false, true
 D) false, false
 
 
+Coding problems
+Problem 1: Reverse a String
+Write a Java function to reverse a given string.
+
+Example:
+Input: "hello" Output: "olleh"
+
+Problem 2: Check for Palindrome
+Write a Java function to check if a given string is a palindrome. A string is a palindrome if it reads the same forward and backward.
+
+Example:
+Input: "madam" Output: true
+
+Problem 3: Count Vowels and Consonants
+Write a Java function to count the number of vowels and consonants in a given string.
+
+Example:
+Input: "hello world" Output: Vowels: 3, Consonants: 7
+
+
+Problem 4: Find the First Non-Repeated Character
+Write a Java function to find the first non-repeated character in a given string.
+
+Example:
+Input: "swiss" Output: 'w'
+
+Problem 5: Anagram Check
+Write a Java function to check whether two given strings are anagrams of each other. Two strings are anagrams if they contain the same characters in the same frequency but may have a different order.
+
+Example:
+Input: "listen", "silent" Output: true
+
+
+
 
      */
 
