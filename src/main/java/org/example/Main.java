@@ -196,9 +196,64 @@ public class Main {
         print("*")
         println()
     */
+        //String -> in most of the lang string is considered as an data structure
+// in java -> string object -> string class -> immutable
+// length()-> , charAt(index) -> return char at the index
+//substring(s,e) -> ,
+// indexOf(char)->first occ
+// equals() ->campare  toLowerCase(), toUpperCase(), replace(oldChar,newChar)
+// contains(charSequence) ->
+// vairiaty ->
+// string buffer, string builder ->  variety to create new Strings
+// String Buffer -> it allows modification of the string without creating
+// new string objects
+        StringBuffer buffer =new StringBuffer("hello");
+        buffer.append(" world");
+        System.out.println(buffer);
+
+        // string builder -> fast -> non thread safe in thread everything happens
+        StringBuilder builder =new StringBuilder("hello");
+        builder.append("JAva");
+        System.out.println(buffer);
+
+//        String s1="Hi";// string literal -> create -> it is sstored in string pool
+        // it stores unique values
+        // if same string literal is used multiple times java reuse reference to same object
+
+//        String str1="Hello";
+//        String str2="Hello";// str1,str2 refers to same string object in string pool thus saves memory
+
+        // new string objects-> create new string object -> outside the pool
+//        String str3=new String("Hello");// ->refernce to new string object
+
+        // unlike String
+        // string mutable
+        //-> when we string builder -> default capacity -> 16 characters
+        // 17 char -> 32 chars -> keeps on doubling its size
+        // internally -> stringbuildr -> character array -> it does not create any new object
+
+        // immutable
+        String str1="Hello";
+        str1=str1+"World";
+        System.out.println(str1);
+// mutable
+        StringBuilder sb=new StringBuilder("hello");
+        sb.append("world");
+        System.out.println(sb);
+
+        String s1="Java";
+        String s2="Java";
+        if(s1.equals(s2)){
+            System.out.println("String are equal");
+        }
+        else{
+            System.out.println("String are not equal");
+        }
+
 
 
     }
 }
 // type of conditional statements ->
 // if ->
+
