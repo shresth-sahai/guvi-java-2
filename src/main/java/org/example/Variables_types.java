@@ -45,7 +45,7 @@ public class Variables_types {
 //            Employee.displayCount(); // error
 //
 //        }
-    public class Employee{
+//    public class Employee{
 //        String name; // instance var
 //         int count=0;
 //        Employee(String name){
