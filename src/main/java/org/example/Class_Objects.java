@@ -51,13 +51,13 @@ public class Class_Objects {
         void displayInfo(){
             System.out.print(pages+title);
         }
-        main(){
-            Book b1=new Book();
-            b1.displayInfo(); // 0 Unknown
-
-            Book b2=new Book("java",120);
-            b2.displayInfo(); // 120 java
-        }
+//        main(){
+//            Book b1=new Book();
+//            b1.displayInfo(); // 0 Unknown
+//
+//            Book b2=new Book("java",120);
+//            b2.displayInfo(); // 120 java
+//        }
 
 }
 }
