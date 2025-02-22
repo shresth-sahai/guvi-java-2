@@ -75,7 +75,7 @@ public class Test {
         obj.show();
     }
 }
-
+Child
 
 class Animal {
     String color = "Brown";
@@ -94,7 +94,7 @@ public class Test {
         Dog d = new Dog();
         d.printColors();
     }
-}
+}Black Brown
 
 
 
@@ -118,7 +118,7 @@ class Test {
         Test t = new Test();
         t.display();
     }
-}
+}10
 
 
 
@@ -141,7 +141,7 @@ public class Test {
         c.show();
     }
 }
-
+Parent Child
 
 
 
@@ -162,7 +162,7 @@ public class Test {
         new Child();
     }
 }
-
+// parent constructor will run first -> A B
 
 
 class Grandparent {
@@ -174,6 +174,7 @@ class Parent extends Grandparent {
 }
 
 class Child extends Parent {
+
     void greet() { System.out.print("Hey "); }
 }
 
@@ -182,7 +183,7 @@ public class Test {
         Grandparent g = new Child();
         g.greet();
     }
-}
+}/Hi
 
 
 class MyClass {
@@ -201,7 +202,7 @@ class MyClass {
     public static void main(String[] args) {
         new MyClass();
     }
-}
+} 10 5
 
 
 class A {
@@ -222,7 +223,7 @@ public class Test {
         B b = new B();
         b.printX();
     }
-}
+}200 100
 
 
 class Parent {
@@ -236,7 +237,6 @@ class Parent {
         System.out.println(val);
     }
 }
-
 class Child extends Parent {
     int val = 10; // This initializer hasn't run when Parent's constructor calls printVal()
 
@@ -246,15 +246,12 @@ class Child extends Parent {
         System.out.println(val);
     }
 }
-
 public class Test {
     public static void main(String[] args) {
         new Child();
     }
 }
-
-
-
+// 0
 
 
 class A {
@@ -279,7 +276,7 @@ public class Test {
     public static void main(String[] args) {
         new B();
     }
-}
+} A 10 B
 
 
 
