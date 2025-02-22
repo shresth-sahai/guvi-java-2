@@ -27,7 +27,7 @@ public class This_SUPER {
     super -> used in subclasses to refer to immediate superclass
     class animal{
     String color="Brown";
-    Animal(){
+    animal(){
     System.out.println("Animal constructor called");
     }
     void eat(){
