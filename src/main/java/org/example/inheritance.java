@@ -228,20 +228,16 @@ public class Test {
 
 class Parent {
     int val = 5;
-
     Parent() {
         printVal();
     }
-
     void printVal() {
         System.out.println(val);
     }
 }
 class Child extends Parent {
     int val = 10; // This initializer hasn't run when Parent's constructor calls printVal()
-
     Child() { }
-
     void printVal() {
         System.out.println(val);
     }
