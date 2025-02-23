@@ -11,7 +11,7 @@ public class Product implements Taxable {
         this.q=q;
     }
     @Override
-    public double salesTax(){
+    public double calcTax(){
         return salesTax*price;
     }
 }
