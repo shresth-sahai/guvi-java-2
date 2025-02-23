@@ -278,6 +278,27 @@ coding problems
 1. Basic Inheritance
 Write a Java program where a class Animal has a method makeSound(). Create a subclass Dog that overrides this method to print "Bark!". Demonstrate calling the method from both parent and child class instances.
 
+//1 // parent class
+class Animal {
+void makeSound(){
+System.out.println("animal sound");
+}
+}
+//child class
+class Dog extends Animal{
+@override
+void makeSound(){
+System.out.println("Bark");
+}
+}
+class Main{
+public static void main(String[] args){
+Animal a=new Animal();
+Dog d=new Dog();
+a.makeSound();
+d.makeSound();
+}}
+
 2. Using Static Variables
 Create a class BankAccount with a static variable bankName, an instance variable accountHolder, and a method to display account details. Create multiple objects of BankAccount and show how the static variable is shared.
 
