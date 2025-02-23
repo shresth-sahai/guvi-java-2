@@ -398,15 +398,18 @@ s.display();
 
 7. Static Block Execution
 Write a Java program where a class Logger has a static block that prints "Logger initialized". Create an object of Logger in the main method and observe when the static block executes.
-2 1 3
+2 1 3 3
 
 class Logger{
+
 static{
 print(2);
 }
+
 Logger(){
 print(3);
 }
+
 psvm(){
 print(1);
 Logger l1=new Logger();
