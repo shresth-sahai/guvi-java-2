@@ -274,6 +274,32 @@ public class Test {
     }
 } A 10 B
 
+coding problems
+1. Basic Inheritance
+Write a Java program where a class Animal has a method makeSound(). Create a subclass Dog that overrides this method to print "Bark!". Demonstrate calling the method from both parent and child class instances.
+
+2. Using Static Variables
+Create a class BankAccount with a static variable bankName, an instance variable accountHolder, and a method to display account details. Create multiple objects of BankAccount and show how the static variable is shared.
+
+3. Constructor Inheritance
+Write a Java program where a class Vehicle has a constructor that initializes brand and year. Create a subclass Car that extends Vehicle and adds an additional attribute model. Use constructors properly and display all details.
+
+4. Static Methods in a Class
+Create a class MathOperations that has a static method add(int a, int b), and a non-static method multiply(int a, int b). Demonstrate calling both methods from the main function.
+
+5. Method Overriding in Inheritance
+Define a base class Employee with a method calculateSalary(). Extend it with a class Manager that overrides calculateSalary() to add a bonus. Demonstrate polymorphism in action.
+
+6. Using super Keyword
+Create a class Person with instance variables name and age, and a constructor to initialize them. Then, create a subclass Student that adds grade and calls the parent constructor using super().
+
+7. Static Block Execution
+Write a Java program where a class Logger has a static block that prints "Logger initialized". Create an object of Logger in the main method and observe when the static block executes.
+
+8. Static vs Instance Methods
+Create a class Utility with a static method convertToUpperCase(String str), and an instance method reverseString(String str). Show how each method is called differently.
+
+
 
 
      */
