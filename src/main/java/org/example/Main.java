@@ -359,18 +359,78 @@ Coding Exercises on Exception Handling
 Exercise 1:
 Write a Java program that takes two numbers as input and performs division. Handle the case where the denominator is zero using a try-catch block.
 
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int d=sc.nextInt();
+try {
+int r=n/d;
+}
+catch(AE e){
+
+}
+finally {
+sc.close();
+print();
+}
+
 Exercise 2:
 Create a method checkEligibility(int age) that throws an IllegalArgumentException if the age is less than 18. Call this method from main() and handle the exception properly.
 
+
+
 Exercise 3:
-Write a Java program that tries to access an invalid array index and catches ArrayIndexOutOfBoundsException.
+Write a Java program that tries to access an invalid array index and
+ catches ArrayIndexOutOfBoundsException.
+try {
+int[] n={1,2,3};
+print(n[5]);
+}
+catch(ArrayIndexOutOfBoundException e){
+print("");
+}
+
+
 
 Exercise 4:
-Create a method readFile(String filename) that declares throws IOException. Call this method from main() and handle the exception.
+Create a method readFile(String filename) that declares throws IOException.
+Call this method from main() and handle the exception.
+
+static void readFile(String filename) throws IOException {
+FileReader file=new FileReader(filename);
+BufferedReader br=new BuffereReader(file);
+print();
+br.close();
+}
+psvm()
+{
+try {
+readFile("");
+}catch(IOException e){
+print();
+}
 
 Exercise 5:
-Write a program with two methods: methodA() calls methodB(), and methodB() throws an exception using throw. Catch the exception in main() and display an appropriate message.
+Write a program with two methods: methodA()
+calls methodB(), and methodB() throws an exception using throw.
+ Catch the exception in main() and display an appropriate message.
+
+ static void methodB(){
+ throw new RuntimeException("Exception thrown in MethodB")
+ } static void methodA(){
+        methodB();
+ }
+ psvm(){
+ try{
+ methodA();
+ }
+ catch(RuntimeException e){
+ print()
+ }
+ }
+
+
      */
+
 }
 // type of conditional statements ->
 // if ->
