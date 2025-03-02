@@ -209,14 +209,14 @@ public class Main {
 // string buffer, string builder ->  variety to create new Strings
 // String Buffer -> it allows modification of the string without creating
 // new string objects
-        StringBuffer buffer =new StringBuffer("hello");
-        buffer.append(" world");
-        System.out.println(buffer);
-
-        // string builder -> fast -> non thread safe in thread everything happens
-        StringBuilder builder =new StringBuilder("hello");
-        builder.append("JAva");
-        System.out.println(buffer);
+//        StringBuffer buffer =new StringBuffer("hello");
+//        buffer.append(" world");
+//        System.out.println(buffer);
+//
+//        // string builder -> fast -> non thread safe in thread everything happens
+//        StringBuilder builder =new StringBuilder("hello");
+//        builder.append("JAva");
+//        System.out.println(buffer);
 
 //        String s1="Hi";// string literal -> create -> it is sstored in string pool
         // it stores unique values
@@ -235,48 +235,142 @@ public class Main {
         // internally -> stringbuildr -> character array -> it does not create any new object
 
         // immutable
-        String str1="Hello";
-        str1=str1+"World";
-        System.out.println(str1);
-// mutable
-        StringBuilder sb=new StringBuilder("hello");
-        sb.append("world");
-        System.out.println(sb);
-
-        String s1="Java";
-        String s2="Java";
-        if(s1.equals(s2)){
-            System.out.println("String are equal");
-        }
-        else{
-            System.out.println("String are not equal");
-        }
-
-String ss="Hi";
-        String ff=new String("Hi").intern();// adds to string pool
-        System.out.println(ss==ff); //true
-
-//        String str1 = "hello";
-        String str2 = "hello";
-        String str3 = new String("hello");
-        String str4 = str3.intern();
+//        String str1="Hello";
+//        str1=str1+"World";
+//        System.out.println(str1);
+//// mutable
+//        StringBuilder sb=new StringBuilder("hello");
+//        sb.append("world");
+//        System.out.println(sb);
+//
+//        String s1="Java";
+//        String s2="Java";
+//        if(s1.equals(s2)){
+//            System.out.println("String are equal");
+//        }
+//        else{
+//            System.out.println("String are not equal");
+//        }
+//
+//String ss="Hi";
+//        String ff=new String("Hi").intern();// adds to string pool
+//        System.out.println(ss==ff); //true
+//
+////        String str1 = "hello";
+//        String str2 = "hello";
+//        String str3 = new String("hello");
+//        String str4 = str3.intern();
 
         // Memory representation
-//        System.out.println(str1 == str2); // true
-        System.out.println(str1 == str3); //false
-//        System.out.println(str1 == str4);//true
-        System.out.println(str2 == str4); //true
+////        System.out.println(str1 == str2); // true
+//        System.out.println(str1 == str3); //false
+////        System.out.println(str1 == str4);//true
+//        System.out.println(str2 == str4); //true
+//
+//
+//        String b111="abc123";
+//        char [] c=b111.toCharArray();
+//        Arrays.sort(c);
+//
+//        for(char ch:c){
+//            System.out.println(ch);
+//        }
 
 
-        String b111="abc123";
-        char [] c=b111.toCharArray();
-        Arrays.sort(c);
 
-        for(char ch:c){
-            System.out.println(ch);
+
+        // try / catch  2 march 25 lecture
+        /*
+        Exception Handling -> allows a program to deal with runtime errors
+        1 try -> Definea a block of code that might throw an exception
+        2 catch-> catches the exception
+        3 finally -> always executes wheather exception occurs or not
+
+        4 throw -> explicitly throw an err
+        5 throws -> declares the exception mentioned in throw
+
+
+
+
+         */
+    // try /catch
+        try {
+            int divideByZero=5/0;
+
+        }catch(ArithmeticException e){
+            System.out.print( "AE exception"+ e.getMessage());
+        }
+        finally{
+            System.out.print( "This will always execute");
+        }
+        try{
+            checkAge(15);
+        }catch(IllegalArgumentException e){
+            System.out.print( "II exception"+ e.getMessage());
         }
 
     }
+    static void checkAge(int age) throws IllegalArgumentException {
+        if(age<18){
+            throw new IllegalArgumentException("must be greater than 18");
+        }
+        else {
+            System.out.print( "Valid age");
+        }
+    }
+    /*
+    Multiple Choice Questions (MCQs) on Exception Handling
+MCQ 1:
+What happens when an exception is thrown inside a try block but there is no corresponding catch block?
+A) The program continues execution normally.
+B) The program terminates abnormally.
+C) The program automatically recovers from the exception.
+D) The program enters an infinite loop.
+
+MCQ 2:
+Which of the following is the correct way to declare a method that might throw an exception?
+A) public void method() throw IOException {}
+B) public throws void method() IOException {}
+C) public void method() throws IOException {}
+D) public void throws method(IOException) {}
+
+MCQ 3:
+What is the purpose of the finally block in Java?
+A) It is executed only if an exception occurs.
+B) It is executed only if no exception occurs.
+C) It always executes, regardless of whether an exception occurs or not.
+D) It is executed only when explicitly called.
+
+MCQ 4:
+Which keyword is used to explicitly throw an exception in Java?
+A) throws
+B) throw
+C) catch
+D) exception
+
+MCQ 5:
+Which of the following exceptions is an unchecked exception?
+A) IOException
+B) ArithmeticException
+C) SQLException
+D) FileNotFoundException
+
+Coding Exercises on Exception Handling
+Exercise 1:
+Write a Java program that takes two numbers as input and performs division. Handle the case where the denominator is zero using a try-catch block.
+
+Exercise 2:
+Create a method checkEligibility(int age) that throws an IllegalArgumentException if the age is less than 18. Call this method from main() and handle the exception properly.
+
+Exercise 3:
+Write a Java program that tries to access an invalid array index and catches ArrayIndexOutOfBoundsException.
+
+Exercise 4:
+Create a method readFile(String filename) that declares throws IOException. Call this method from main() and handle the exception.
+
+Exercise 5:
+Write a program with two methods: methodA() calls methodB(), and methodB() throws an exception using throw. Catch the exception in main() and display an appropriate message.
+     */
 }
 // type of conditional statements ->
 // if ->
