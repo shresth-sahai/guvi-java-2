@@ -510,7 +510,75 @@ calls methodB(), and methodB() throws an exception using throw.
         treeMap.put(4,"j");
 
         System.out.print(treeMap); // {1:e, 3:A,4:j} sorted based on keys
+/*
+Remove Even Numbers
+Given an ArrayList of integers, remove all even numbers and return the updated list.
+Example:
 
+
+Input: [1, 2, 3, 4, 5, 6]
+Output: [1, 3, 5]
+Find the Maximum Element
+Given an ArrayList of integers, return the maximum value present in the list.
+Example:
+
+Input: [10, 5, 8, 20, 3]
+Output: 20
+Reverse an ArrayList
+Given an ArrayList, return the list in reverse order.
+Example:
+
+Input: [1, 2, 3, 4, 5]
+Output: [5, 4, 3, 2, 1]
+Find the Index of an Element
+Given an ArrayList of strings, find the index of a given target string. If not found, return -1.
+Example:
+
+Input: ["apple", "banana", "cherry", "date"], target = "cherry"
+Output: 2
+Merge Two Sorted ArrayLists
+Given two sorted ArrayLists, merge them into a single sorted list.
+Example:
+
+
+Input: [1, 3, 5], [2, 4, 6]
+Output: [1, 2, 3, 4, 5, 6]
+Remove Duplicates from an ArrayList
+Given an ArrayList of integers, remove all duplicate elements and return the unique list.
+Example:
+
+
+Input: [1, 2, 2, 3, 4, 4, 5]
+Output: [1, 2, 3, 4, 5]
+Check If an ArrayList is Sorted
+Given an ArrayList of integers, check whether the list is sorted in ascending order.
+Example:
+
+
+Input: [1, 2, 3, 4, 5]
+Output: true
+
+Input: [1, 3, 2, 4, 5]
+Output: false
+Count Frequency of an Element
+Given an ArrayList of integers, return the count of occurrences of a specific number.
+Example:
+
+Input: [1, 2, 2, 3, 4, 2, 5], target = 2
+Output: 3
+Swap Two Elements in an ArrayList
+Given an ArrayList and two indices, swap the elements at those indices.
+Example:
+Input: [10, 20, 30, 40, 50], swap(1, 3)
+Output: [10, 40, 30, 20, 50]
+Find Common Elements in Two Lists
+Given two ArrayLists of integers, return a new list containing only the common elements.
+Example:
+
+Input: [1, 2, 3, 4, 5], [3, 4, 5, 6, 7]
+Output: [3, 4, 5]
+
+        */
 
 
     }
