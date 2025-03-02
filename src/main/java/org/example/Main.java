@@ -1,6 +1,14 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.TreeMap;
+import java.util.TreeSet;
+import java.util.Vector;
 
 
 public class Main {
@@ -277,47 +285,45 @@ public class Main {
 //        }
 
 
-
-
-        // try / catch  2 march 25 lecture
-        /*
-        Exception Handling -> allows a program to deal with runtime errors
-        1 try -> Definea a block of code that might throw an exception
-        2 catch-> catches the exception
-        3 finally -> always executes wheather exception occurs or not
-
-        4 throw -> explicitly throw an err
-        5 throws -> declares the exception mentioned in throw
-
-
-
-
-         */
-    // try /catch
-        try {
-            int divideByZero=5/0;
-
-        }catch(ArithmeticException e){
-            System.out.print( "AE exception"+ e.getMessage());
-        }
-        finally{
-            System.out.print( "This will always execute");
-        }
-        try{
-            checkAge(15);
-        }catch(IllegalArgumentException e){
-            System.out.print( "II exception"+ e.getMessage());
-        }
-
-    }
-    static void checkAge(int age) throws IllegalArgumentException {
-        if(age<18){
-            throw new IllegalArgumentException("must be greater than 18");
-        }
-        else {
-            System.out.print( "Valid age");
-        }
-    }
+//        // try / catch  2 march 25 lecture
+//        /*
+//        Exception Handling -> allows a program to deal with runtime errors
+//        1 try -> Definea a block of code that might throw an exception
+//        2 catch-> catches the exception
+//        3 finally -> always executes wheather exception occurs or not
+//
+//        4 throw -> explicitly throw an err
+//        5 throws -> declares the exception mentioned in throw
+//
+//
+//
+//
+//         */
+//    // try /catch
+////        try {
+////            int divideByZero=5/0;
+////
+////        }catch(ArithmeticException e){
+////            System.out.print( "AE exception"+ e.getMessage());
+////        }
+////        finally{
+////            System.out.print( "This will always execute");
+////        }
+////        try{
+////            checkAge(15);
+////        }catch(IllegalArgumentException e){
+////            System.out.print( "II exception"+ e.getMessage());
+////        }
+////
+////    }
+//    static void checkAge(int age) throws IllegalArgumentException {
+//        if(age<18){
+//            throw new IllegalArgumentException("must be greater than 18");
+//        }
+//        else {
+//            System.out.print( "Valid age");
+//        }
+//    }
     /*
     Multiple Choice Questions (MCQs) on Exception Handling
 MCQ 1:
@@ -416,7 +422,8 @@ calls methodB(), and methodB() throws an exception using throw.
 
  static void methodB(){
  throw new RuntimeException("Exception thrown in MethodB")
- } static void methodA(){
+ }
+ static void methodA(){
         methodB();
  }
  psvm(){
@@ -431,6 +438,82 @@ calls methodB(), and methodB() throws an exception using throw.
 
      */
 
+//    ArrayList<String> list =new ArrayList<>();
+//    list.add("apple");list.add("orange");
+//     list.remove("apple");
+//     for(String a:list ){
+//
+//    } for(int i=0;i<2;i++){
+////
+////    }
+//
+        // List interface - ordered element
+        // dupliactes, index based access , dynamic resizing
+        // 2 -> 2 -> 2
+        //  1 2 3    o(1)->
+
+        // linkedlist -> double linkedlist
+
+        //  1 <-> 2 <-> 3 <->  random access is n elements o(n)
+        // pointers -> c++
+        // java reference ->
+        LinkedList<Integer> numbers=new LinkedList<>();
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(40);
+        numbers.addLast(30);
+        numbers.addFirst(1);
+
+        numbers.removeFirst();
+        for(int n:numbers){
+
+        }
+     // frequent updations we req it
+
+    Vector<String> v=new Vector<>();
+        v.add("dog"); v.add("cat");
+      String s=  v.firstElement();
+
+// thread safe while arraylist is not thread safe , vector slow
+
+        // set interfaces
+
+        HashSet<Integer> set=new HashSet<>();
+        set.add(1);
+        set.add(2);
+        set.add(2);
+        System.out.print(set);// 1 2
+
+        TreeSet<Integer> set1=new TreeSet<>();
+        set1.add(5);
+        set1.add(1);set1.add(3);
+
+        System.out.print(set1);// 1 3 5
+
+        PriorityQueue<Integer> pq=new PriorityQueue<>(); // min heap // max heap
+        pq.add(10);
+        pq.add(5); pq.add(20);
+
+        System.out.print(pq);// 5 10 20
+        System.out.print(pq.poll());// 5
+        System.out.print(pq);//  10 20
+
+        // max heap -> 20 10 5
+        HashMap<Integer,String> map=new HashMap<>();
+        map.put(1, "A"); // {1=A,2=B}
+        map.put(2,"B");
+        map.remove(2);
+
+        TreeMap<Integer,String> treeMap=new TreeMap<>();
+        treeMap.put(3,"A");
+        treeMap.put(1,"e");
+        treeMap.put(4,"j");
+
+        System.out.print(treeMap); // {1:e, 3:A,4:j} sorted based on keys
+
+
+
+    }
 }
 // type of conditional statements ->
 // if ->
