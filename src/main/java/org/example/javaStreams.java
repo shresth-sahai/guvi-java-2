@@ -172,6 +172,20 @@ System.out.println(first.orElse(0));
     C) 0
     D) No value
 
+
+    Filter and Sort a List of Employees
+Problem Statement: You are given a list of Employee objects. Each Employee has the following properties:
+
+id (Integer)
+name (String)
+age (Integer)
+salary (Double)
+Write a Java program that:
+
+Filters the list to include only employees who have an age greater than 30.
+Sorts the remaining employees by their salary in descending order.
+Collect the results into a new list and print the sorted list of employees.
+
   */
 
 
