@@ -186,6 +186,20 @@ Filters the list to include only employees who have an age greater than 30.
 Sorts the remaining employees by their salary in descending order.
 Collect the results into a new list and print the sorted list of employees.
 
+
+
+Question 2: Group Products by Category and Count Them
+Problem Statement: You are given a list of Product objects. Each Product has the following properties:
+
+id (Integer)
+name (String)
+category (String)
+Write a Java program that:
+
+Groups the products by their category.
+Counts the number of products in each category.
+Print the result in the form of a Map where the key is the category name and the value is the count of products in that category.
+
   */
 
 
