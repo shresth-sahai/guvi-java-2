@@ -1,14 +1,9 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.TreeMap;
-import java.util.TreeSet;
-import java.util.Vector;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import java.time.LocalDate;
+import java.util.*;
 
 
 public class Main {
@@ -457,82 +452,67 @@ calls methodB(), and methodB() throws an exception using throw.
         //  1 <-> 2 <-> 3 <->  random access is n elements o(n)
         // pointers -> c++
         // java reference ->
-        LinkedList<Integer> numbers=new LinkedList<>();
-        numbers.add(10);
-        numbers.add(20);
-        numbers.add(40);
-        numbers.addLast(30);
-        numbers.addFirst(1);
-
-        numbers.removeFirst();
-        for(int n:numbers){
-
-        }
+//        LinkedList<Integer> numbers=new LinkedList<>();
+//        numbers.add(10);
+//        numbers.add(20);
+//        numbers.add(40);
+//        numbers.addLast(30);
+//        numbers.addFirst(1);
+//
+//        numbers.removeFirst();
+//        for(int n:numbers){
+//
+//        }
      // frequent updations we req it
 
-    Vector<String> v=new Vector<>();
-        v.add("dog"); v.add("cat");
-      String s=  v.firstElement();
+//    Vector<String> v=new Vector<>();
+//        v.add("dog"); v.add("cat");
+//      String s=  v.firstElement();
 
 // thread safe while arraylist is not thread safe , vector slow
 
         // set interfaces
-
-        HashSet<Integer> set=new HashSet<>();
-        set.add(1);
-        set.add(2);
-        set.add(2);
-        System.out.print(set);// 1 2
-
-        TreeSet<Integer> set1=new TreeSet<>();
-        set1.add(5);
-        set1.add(1);set1.add(3);
-
-        System.out.print(set1);// 1 3 5
-
-        PriorityQueue<Integer> pq=new PriorityQueue<>(); // min heap // max heap
-        pq.add(10);
-        pq.add(5); pq.add(20);
-
-        System.out.print(pq);// 5 10 20
-        System.out.print(pq.poll());// 5
-        System.out.print(pq);//  10 20
-
-        // max heap -> 20 10 5
-        HashMap<Integer,String> map=new HashMap<>();
-        map.put(1, "A"); // {1=A,2=B}
-        map.put(2,"B");
-        map.remove(2);
-
-        TreeMap<Integer,String> treeMap=new TreeMap<>();
-        treeMap.put(3,"A");
-        treeMap.put(1,"e");
-        treeMap.put(4,"j");
-
-        System.out.print(treeMap); // {1:e, 3:A,4:j} sorted based on keys
-/*
-Remove Even Numbers
-Given an ArrayList of integers, remove all even numbers and return the updated list.
-Example:
-
-
-
-Input: [1, 2, 3, 4, 5, 6]
-Output: [1, 3, 5]
-nums.removeIf(n-> n%2 ==0);
-return nums;
+//
+//        HashSet<Integer> set=new HashSet<>();
+//        set.add(1);
+//        set.add(2);
+//        set.add(2);
+//        System.out.print(set);// 1 2
+//
+//        TreeSet<Integer> set1=new TreeSet<>();
+//        set1.add(5);
+//        set1.add(1);set1.add(3);
+//
+//        System.out.print(set1);// 1 3 5
+//
+//        PriorityQueue<Integer> pq=new PriorityQueue<>(); // min heap // max heap
+//        pq.add(10);
+//        pq.add(5); pq.add(20);
+//
+//        System.out.print(pq);// 5 10 20
+//        System.out.print(pq.poll());// 5
+//        System.out.print(pq);//  10 20
+//
+//        // max heap -> 20 10 5
+//        HashMap<Integer,String> map=new HashMap<>();
+//        map.put(1, "A"); // {1=A,2=B}
+//        map.put(2,"B");
+//        map.remove(2);
+//
+//        TreeMap<Integer,String> treeMap=new TreeMap<>();
+//        treeMap.put(3,"A");
+//        treeMap.put(1,"e");
+//        treeMap.put(4,"j");
+//
+//        System.out.print(treeMap); // {1:e, 3:A,4:j} sorted based on keys
+///*
+//Remove Even Numbers
+//Given an ArrayList of integers, remove all even numbers and return the updated list.
+//Example:
 
 
 
-
-Find the Maximum Element
-Given an ArrayList of integers, return the maximum value present in the list.
-Example:
-
-Input: [10, 5, 8, 20, 3]
-Output: 20
-
-Reverse an ArrayList
+/*Reverse an ArrayList
 Given an ArrayList, return the list in reverse order.
 Example:
 
@@ -594,10 +574,199 @@ Example:
 Input: [1, 2, 3, 4, 5], [3, 4, 5, 6, 7]
 Output: [3, 4, 5]
 
+            check a+b = target
+2 sum ->  1 2 0 4 3 8  target = 9  return true
+
+Example 1:
+
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+Example 2:
+
+Input: nums = [3,2,4], target = 6
+Output: [1,2]
+
+2 7 11 15 -> target -> 9
+a+b=target --> b= target -a
+HashSet -> lookup -> processed elements of array
+
         */
+//        ArrayList<Integer> numbers=new ArrayList<>();
+//        numbers.add(2);
+//        numbers.add(3);
+//        numbers.add(5);numbers.add(1);
+//        int target =4;
+// [ 2 ,3 ,5,1] ->  4
+    /* seen -> 2 , 3 , 5
+    1->   2
+
+     */
+
+//        HashSet<Integer> seen=new HashSet<>();
+//
+//        for(int n:numbers){
+//            int complement=target-n;
+
+//            if(seen.contains(complement)){
+//                System.out.println("Pair found"+n+complement);
+//            }
+//            seen.add(n);
+//        }
+//        System.out.println("Sorry found 404 ");
 
 
+//        Input: height = [1,8,6,2,5,4,8,3,7]
+//        Output: 49
+//        Explanation: The above vertical lines are
+//        represented by array [1,8,6,2,5,4,8,3,7].
+//        In this case, the max area of water (blue section)
+//        the container can contain is 49.
+//ArrayList<Integer> h=new ArrayList<>();
+//        int l=0, r=h.size()-1; int maxA=0;
+//
+//        while(l<r){
+//
+//            int minH=Math.min(h.get(l),h.get(r));
+//
+//            int w=r-l;
+//            int a=minH*w;
+//
+//            maxA=Math.max(maxA,a);
+//
+//            if(h.get(l)<h.get(r)) l++;
+//            else r--;
+//        }
+//        System.out.print(maxA);
+        /*
+        Stack -> LIFO
+
+        class Solution {
+    // ['(',')']
+    // ((
+        // (
+    public boolean isValid(String s) {
+        Stack<Character> stack=new Stack<>();
+
+        for(char ch: s.toCharArray()){
+            if(ch=='(' || ch=='{' || ch=='['){
+                stack.push(ch);
+            }
+            else{
+                    if(stack.isEmpty()) return false;
+                    else{
+                        char top= stack.pop();
+      if(ch==')' && top !='(' ||   ch==']' && top !='[' ||  ch=='}' && top !='{' ){
+      return false;
+      }
+                    }
+
+            }
+
+        }
+         return stack.isEmpty();
+
+}
+}
+IndexOutOfBoundsException
+
+
+
+class Solution {
+    public int maxProfit(int[] prices) {
+        int n= prices.length;
+        int maxProfit= Integer.MIN_VALUE;
+
+
+        int buyValue=prices[0];
+
+        for(int i=1;i<n;i++){
+
+            maxProfit= Math.max(prices[i]- buyValue, maxProfit);
+
+            buyValue=Math.min(buyValue, prices[i]);
+
+        }
+
+
+        return (maxProfit<0) ? 0 : maxProfit;
     }
+}
+class Solution {
+    public int firstUniqChar(String s) {
+        /*
+        l -> 1
+        e->1,2 ,3
+        t->1
+        c->1
+        o->1
+        d->1
+        */
+//        HashMap<Character,Integer> hm=new HashMap<>();
+//        for(char c:s.toCharArray()){
+//
+//            hm.put(c,hm.getOrDefault(c,0)+1);
+//        }
+//        for(int i=0;i<s.length();i++){
+//            if(hm.get(s.charAt(i))==1){
+//                return i;
+//            }
+//        }
+//        return -1;
+//
+//    }
+//}
+
+        /*
+        2014 -> java 8 was release -> upgradations
+        1 lambda expression ->
+        (parameter) -> expression
+        concise n cleaner syntax
+         */
+//        List<String> names=Arrays.asList("A","B","C");
+//        Collections.sort(names, (a, b)-> a.compareTo(b));
+//        names.forEach(System.out.println);
+
+        // 2 functional interface ->
+//        @FunctionalInterface
+//        interface MYFuntionalInterface{
+//            void display(String message);
+//        }
+//        public static void main(String[]  args){
+//            MYFuntionalInterface obj=(message -> System.out.print(message
+//            ));
+//            obj.display("Hello ");
+//        }
+
+        // default methods ->
+        // deafult methods are in interface
+        // earlier interface only had abstract methods
+//        interface i{
+//            default void printMessage(){
+//                System.out.print("hello from default method");
+//            }
+//        }
+//class m implements  i{
+//            public void static main(){
+//                m  o=new m();
+//                o.printMessage();
+//    }
+//}
+
+        // method reference -> call using lambda expressions
+//      List<String > names=Arrays.asList("A","B");
+//      names.forEach(System.out::print); //method reference
+//      names.forEach(name->System.out.print(name));
+//      LocalDate date=new LocalDate.now();
+//        System.out.print(date);
+//
+//        String name="john";
+//        Optional<String> optionalName=Optional.ofNullable(name);
+//
+//        System.out.println(optionalName.isPresent());
+
+   }
+
 }
 // type of conditional statements ->
 // if ->
