@@ -2,10 +2,10 @@ package org.example;
 
 public class COunter {
     int count=0;
-    public void increment(){
+    public synchronized void increment(){
         count++;
     }
-    public int getCOunt(){
+    public synchronized int getCOunt(){
         return count;
 
     }
@@ -24,7 +24,13 @@ public class COunter {
         });
         thread2.start();thread1.start();
 
-        thread1.join();thread2.join();
+        try{
+            thread1.join();thread2.join();
+        }
+        catch(InterruptedException e){
+
+        }
+
         System.out.print(cOunter.getCOunt());
     }
 }// val can be less than 2000 becuase of the race condition
