@@ -3,6 +3,7 @@ package org.example;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 
@@ -764,10 +765,55 @@ class Solution {
 //        Optional<String> optionalName=Optional.ofNullable(name);
 //
 //        System.out.println(optionalName.isPresent());
+        //1 List
+        List<String> names= Arrays.asList("aBc","d","ef");
+        names.stream()
+                .map(String::toUpperCase)
+                .forEach(System.out::println);
 
+        //2
+        List<String> listStrings= Arrays.asList("aBc","d","ef","");
+        names.stream()
+                .filter(str->!str.isEmpty())
+                .forEach(System.out::println);
+
+        //3
+
+        List<String> listStrings1= Arrays.asList("aBc","d","Aef","");
+        names.stream()
+                .filter(str->str.startsWith("A"))
+                .forEach(System.out::println);
+
+        //4
+
+        DateTimeFormatter formatter=DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+        //5 Filter and Sort Strings in a List
+        //Problem: You are given a list of Strings. Write a program to filter out the strings that have a length greater than 3 characters and then sort them in reverse order. After sorting, print the filtered and sorted list.
+        //
+        //Example: Given List: ["apple", "banana", "kiwi", "fig", "grape", "pear"]
+        //
+        //Requirements:
+        //
+        //Use the Stream API to filter and sort the list.
+        //Use Lambda expressions to filter strings with length greater than 3 characters.
+        //Sort the filtered strings in reverse order.
+        //Calculate the Sum and Average of Numbers
+        //Problem: You are given a list of integers. Write a program to calculate the sum and average of all numbers in the list. Use Java's Stream API to perform these calculations.
+        //
+        //Example: Given List: [10, 20, 30, 40, 50]
+        //
+        //Requirements:
+        //
+        //Use the Stream API to calculate the sum and average.
+        //Print both the sum and average.
    }
+
 
 }
 // type of conditional statements ->
 // if ->
+
+
+
 
