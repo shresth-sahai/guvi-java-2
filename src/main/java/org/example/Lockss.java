@@ -82,7 +82,50 @@ public class Lockss {
     -> lock ->flexibility , fairness
      */
 
+    // thread signal
+//    private final Object lock =new Object();
+//    public void waitForSignal() throws InterruptedException{
+//        synchronized (lock){
+//            lock.wait(); // wait until notified
+//        }
+//    }
+//    public void sendSignal(){
+//        synchronized (lock){
+//            lock.notify();// notifyu one waiting thread
+//        }
+//    }
 
+//    public void waitForSignal() throws InterruptedException{
+//        synchronized (lock){
+//            System.out.print("thread is waiting");
+//            lock.wait(); // wait until notified
+//            System.out.print("thread resumed ");
+//        }
+//    }
+//    public void sendSignal(){
+//        synchronized (lock){
+//            lock.notify();// notifyu one waiting thread
+//        }
+//    }
 
+private int data;
+private boolean dataAvailable=false;
+
+public synchronized void produce(int data) throws InterruptedException{
+    while(dataAvailable){
+        wait();
+    }
+    this.data=data;
+    dataAvailable=true;
+    notify();
+}
+    public synchronized int consume(int data) throws InterruptedException{
+        while(!dataAvailable){
+            wait();
+        }
+        dataAvailable=false;
+        notify();
+        return data;
+    }
 
 }
