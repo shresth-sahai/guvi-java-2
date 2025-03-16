@@ -33,7 +33,7 @@ public class ParellelismVSConcurrency {
 //            }
 //        };
 
-        // parellel execution
+    // parellel execution
 
 //                Runnable task1=()->{
 //            try{
@@ -81,19 +81,24 @@ public class ParellelismVSConcurrency {
 //        Thread thread3=new Thread(task3);
 
 
-        // simulteneous execution -> work -> divided into multiple cores
+    // simulteneous execution -> work -> divided into multiple cores
 
-   // ForkJoinPool -> java framewok used fr parellel processing
-   // to execute tasks on multiple threads
+    // ForkJoinPool -> java framewok used fr parellel processing
+    // to execute tasks on multiple threads
 
 
 //    }
-        public static void main(String[] args){
-            ForkJoinPool pool=new ForkJoinPool();
-            pool.submit(()->{
-                for(int i=0;i<10;i++)
-                System.out.print("Task3 completed");
-            });
-            pool.shutdown();
-        }
+//        public static void main(String[] args){
+//            ForkJoinPool pool=new ForkJoinPool();
+//            pool.submit(()->{
+//                for(int i=0;i<10;i++)
+//                System.out.print("Task3 completed");
+//            });
+//            pool.shutdown();
+//        }
+//}
+
+
+
+
 }
