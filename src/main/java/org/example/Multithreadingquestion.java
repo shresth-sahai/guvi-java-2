@@ -73,17 +73,28 @@ class evenOddPrint{
 
         private final ReadWriteLock lock=new ReentrantLock();
 
-        public String read(){
+        public void read(){
             lock.readLock().lock();
             try{
                 Sysyem.out.print(Thread.currentTHread().getname());
                 return data;
             }
             finally{
-
+lock.readLock.unlock();
             }
         }
-
+        public String write(){
+            lock.writeLock().lock();
+            try{
+                data=newData;
+                Sysyem.out.print(Thread.currentTHread().getname());
+            }
+            finally{
+lock.writeLock.unlock();
+            }
+        }
+ // r1,r2,r3 
+ // w1
 
 
     }
