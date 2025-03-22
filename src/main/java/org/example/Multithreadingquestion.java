@@ -68,3 +68,46 @@ class evenOddPrint{
     // that can be read by multiple threads but can only be written by one thread at a time. 
     // Implement a system with multiple reader threads and a single writer thread
 
+    class SharedResource{
+        private String data="Initial data";
+
+        private final ReadWriteLock lock=new ReentrantLock();
+
+        public String read(){
+            lock.readLock().lock();
+            try{
+                Sysyem.out.print(Thread.currentTHread().getname());
+                return data;
+            }
+            finally{
+
+            }
+        }
+
+
+
+    }
+
+
+
+    // In a banking system, multiple threads might access the same account 
+    // balance (e.g., deposits or withdrawals). A transaction should ensure that 
+    // the account balance is updated
+    //  correctly and consistently even with concurrent deposits or withdrawals.
+
+    // Suppose several threads need to read from or write to a shared file. 
+    // Reading operations can be performed simultaneously, 
+    // but writing requires exclusive access to
+    //  ensure the file content is not corrupted.
+
+
+
+    // A cache is used to store frequently accessed data. Multiple threads
+    //  may access the cache at the same time, and occasionally, the cache might need to be updated or
+    //  invalidated (e.g., when the data expires or is updated).
+
+
+
+    // In this problem, multiple philosophers sit at a table with a fork between each pair
+    //  of philosophers. A philosopher can either think or eat. To eat, a philosopher needs both forks. 
+    // The challenge is to avoid deadlocks and ensure that all philosophers get a chance to eat.
