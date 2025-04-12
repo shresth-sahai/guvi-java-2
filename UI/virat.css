@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header{
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 50px ;
+}
+
+header .header-content h1{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+header .header-content p{
+    font-size: 18px;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+.main-content .intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.main-content .intro img{
+    width: 250px;
+    height: 250px;
+    object-fit:cover;
+    border-radius: 8px;
+    
+}
+.main-content .awards{
+    text-align: center;
+    max-width: 800px;
+    margin:  0 auto;
+
+}
+.main-content .buttons{
+    margin-top: 20px;
+}
+.main-content .buttons a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+footer{
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+}
+footer .quote{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+footer .awards-section,
+footer .works-section{
+    margin-bottom: 40px;
+}
+footer h3{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+footer ul{
+    list-style-type: none;
+    padding-left: 20px;
+}
+footer ul li{
+    font-size: 16px;
+    margin: 5px 0;
+}
