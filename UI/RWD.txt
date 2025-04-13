@@ -1,0 +1,16 @@
+
+
+
+RWD ->Responsive Web Design ->  Iphone Ipad Mac Windows etc -> screens are different 
+-> resizing -> no contents gets removed -> 
+
+Layout -> refers to arrangement of visual elements -> text , image , button etc 
+layouts can vary -> screen size 
+
+Media queries -> css -> adjust things 
+
+
+Bootstrap -> has pre defined class 
+
+GRID SYSTEM -> Responsive layout -> 12 column structure -> rows which grp these 
+

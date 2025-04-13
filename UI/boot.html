@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid Example</title>
+    <!-- Bootstrap CSS (CDN link) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- First Column (takes up 4 out of 12 columns) -->
+            <div class="col-md-3 bg-info text-black p-3">
+                <h3>Column 1</h3>
+                <p>This is the first column, which takes up 4 columns in a 12-column layout.</p>
+            </div>
+            <div class="col-md-3 bg-info text-black p-3">
+                <h3>Column 1</h3>
+                <p>This is the first column, which takes up 4 columns in a 12-column layout.</p>
+            </div>
+            <!-- Second Column (takes up 4 out of 12 columns) -->
+            <div class="col-md-3 bg-warning text-white p-3">
+                <h3>Column 2</h3>
+                <p>This is the second column, which also takes up 4 columns in a 12-column layout.</p>
+            </div>
+            <!-- Third Column (takes up 4 out of 12 columns) -->
+            <div class="col-md-3 bg-success text-white p-3">
+                <h3>Column 3</h3>
+                <p>This is the third column, which takes up 4 columns in a 12-column layout.</p>
+            </div>
+        </div>
+
+        <!-- Second Row (just 1 column across the full width) -->
+        <div class="row">
+            <div class="col-12 bg-primary text-white p-3">
+                <h3>Full Width Column</h3>
+                <p>This is a full-width column spanning across all 12 columns.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Dependencies (for functionality like dropdown, modals, etc.) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
