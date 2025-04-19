@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> JS EXECUTION </h1>
+    <script>
+        var bar = 1;
+        function foo() {
+          return this.bar++
+        }
+        const a = {
+          bar: 10,
+          foo1: foo,
+          foo2: function() {
+            return foo()
+          },
+        } 
+        console.log(a.foo1.call()) // point to window obj // 1
+        console.log(a.foo1()) //10
+        console.log(a.foo2.call())
+        console.log(a.foo2())
+    </script>
+</body>
+</html>
