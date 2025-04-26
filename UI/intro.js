@@ -511,3 +511,57 @@ now js how to run it in local -> NODE JS -> env to run js outside web browser
 // }
 // a().a()
 
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+// for loop
+
+// for(let i=0;i<5;i++){
+//     console.log(i);
+// }
+
+// let i=0;
+// while(i<5){
+//      console.log(i);
+//      i++;
+// }
+// let i=0;
+// do{
+//   console.log(i);
+//   i++;
+// }while(i<5); 
+// everything in js is an object 
+// functuon are first class citizens
+
+// for in loop -> loop over object properties 
+// const p={name:'John',age:30};
+// for(let key in p){
+//     console.log(key,p[key]);
+// }
+
+// for of loop -> loop over iterable objects like arrays
+// let nums=[1,2,3];
+// for(let num of nums){
+//     console.log(num);
+// }
+
+
+// arrays 
+// let arr=[1,2,3];
+// arr.push(4);
+//  console.log(arr);
+//  arr.pop();
+//   console.log(arr);
+  
+//   arr.forEach(item => console.log(item));
+  
+//   // map creates a new arr by applying a function to each element 
+  
+//   let d=arr.map(num=>num*2);
+// console.log(d);
+
+
+
+
+
+
