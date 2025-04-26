@@ -511,6 +511,7 @@ now js how to run it in local -> NODE JS -> env to run js outside web browser
 // }
 // a().a()
 
+<<<<<<< HEAD
 // Online Javascript Editor for free
 // Write, Edit and Run your Javascript code using JS Online Compiler
 
@@ -565,3 +566,112 @@ now js how to run it in local -> NODE JS -> env to run js outside web browser
 
 
 
+=======
+
+{/* <p class="p1" id="p"> 
+  this is para
+  <p>
+    <p class="p1"> 
+  this is para
+  <p>
+    <p class="p1"> 
+
+  this is para
+  <p></p> */}
+
+//   // const element= document.querySelector('.p1');
+// const elements=document.querySelectorAll('.p1');
+// elements.forEach((elem)=>console.log(elem));
+
+// // alert("this is an alert")
+// // let res=confirm('do u want to proeceed');
+// // console.log(res)
+
+// // let name=prompt('Enter ur name')
+// // console.log(name)
+
+// let ele1=document.getElementById('p');
+
+
+// Objective:
+// Create a simple interactive web page that utilizes JavaScript to manipulate the DOM and handle user events.
+
+// Task:
+
+// Design a webpage that contains a button and a div element.
+// The page should have the following behavior when the button is clicked:
+// Change the content of the div element to a new message ("Button was clicked!").
+// Add a new p (paragraph) element to the body of the page with some text ("A new paragraph added.").
+// Display an alert box that informs the user that the button has been clicked.
+// Requirements:
+
+// The webpage should consist of an HTML button and a div element.
+
+// JavaScript should be used to modify the content of the div when the button is clicked.
+
+// A new p element should be dynamically created and added to the webpage.
+
+// An alert should be displayed when the button is clicked.
+
+// const button =document.getElementById('#my-button');
+// const div=document.getElementById('my-div');
+
+// button.addEventListener('click',()=>{
+//     div.textContent='........';
+//     const newPara=document.createElement('p');
+//     newPara.textContent='.....';
+//     document.body.appendChild(newPara);
+//     alert('Clicked !')
+// })
+
+
+// Create a webpage that changes the background color of the page when a button is clicked.
+
+// Task:
+
+// Create a button and a div element on the webpage.
+
+// When the button is clicked:
+
+// Change the background color of the div to a random color each time.
+
+// Display an alert box showing the name of the color that was applied.
+
+
+// Create a webpage with a button that toggles the visibility of a text message.
+
+// Task:
+
+// Create a button and a p element (for the text) on the webpage.
+
+// When the button is clicked:
+
+// Toggle the visibility of the text inside the p element (i.e., show it if it's hidden, hide it if it's shown).
+
+// Change the button text to indicate the current state (e.g., "Show Text" or "Hide Text").
+
+//1 
+
+const colors=['red','blue'];
+const button= document.getElementById('color-button');
+const div=document.getElementById('color-div');
+
+button.addEventListener('click',()=>{
+    const randomColor=colors[Math.floor(Math.random()*colors.length)];
+    div.style.backgroundColor=randomColor;
+    alert('')
+})
+
+
+// Task:
+
+// Create two buttons: one to increment the counter and one to decrement the counter.
+
+// Display the current value of the counter in a div.
+
+// When the "Increment" button is clicked, increase the counter by 1.
+
+// When the "Decrement" button is clicked, decrease the counter by 1.
+
+// The counter should not go below zero.
+>>>>>>> 52b0917 (questions addeed)
