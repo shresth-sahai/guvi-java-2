@@ -674,4 +674,35 @@ button.addEventListener('click',()=>{
 // When the "Decrement" button is clicked, decrease the counter by 1.
 
 // The counter should not go below zero.
+<<<<<<< HEAD
 >>>>>>> 52b0917 (questions addeed)
+=======
+
+
+
+// // array destructuring -> Object 
+// const arr=[1,2,3];
+// // const a=arr[0]
+// const[a,b,c]=arr;
+// const person={name:'Alice',age:30};
+// const {name,age}=person;
+
+// const add=(a,b)=>a+b;
+// console.log(add(3,4)); // 7 
+
+// // rest opr (...) -> collect all remainingin elements into an array of object 
+// const sum=(...numbers) => numbers.reduce((a,b)=> a+b,0);
+// console.log(sum(1,2,3,4,5,56,6,66)); //  we dont want to limit the no of parameters
+
+// const person1= {name:'Bob',age:33,country:'India'};
+// const {name1,...otherinfo}=person1;
+
+// // spread opr -> used to spread the elelmts from array / object to another array / object 
+// const a1=[1,2,3];
+// const a2=[...a1,4,5];
+
+// const p1={name:'Bob',age:33,country:'India'};
+// const p2={...p1,age:21};
+
+
+>>>>>>> 393b109 (code)
