@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Appt</title>
+    <style>
+        .btn{
+background-color: #9f68e0;
+color: #fff;
+border: 0;
+border-radius: 10px;
+padding: 14px 40px;
+font-size: 16px;
+cursor: pointer;
+transition: transform 0.2s;
+        }
+        .btn:active{
+            transform: scale(0.98);
+        }
+        .btn:focus{
+            outline: 0;
+        }
+        .joke{
+            font-size: 30px;
+            letter-spacing: 1px;
+            line-height: 40px;
+            margin: 50px auto;
+            max-width: 600px;
+            color: #fff;
+        }
+        h3{
+            margin: 0;
+            opacity: 0.5;
+            letter-spacing: 2px;
+        }
+        .container{
+            background-color: antiquewhite;
+            border-radius: 10px;
+            padding: 50px 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+        }
+        body{
+            background-color: #0e1050;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; 
+            overflow: hidden;
+            padding: 20px;   
+
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h3> Laugh Challenge</h3>
+        <div id="joke" class="joke"> Loading...</div>
+        <button class="btn" id="jokeBtn"> Get Another Joke </button>
+
+    </div>
+    <script>
+        const jokeElem=document.getElementById('joke');
+        const jokeBtn=document.getElementById('jokeBtn');
+
+        jokeBtn.addEventListener('click',generateJoke);
+
+        generateJoke()
+
+        async function generateJoke(){
+
+            const config={
+                header:{
+                    Accept:'appliaction/json'
+                }
+            }
+            const res=await fetch('https://icanhazdadjoke.com',config);
+            const data=await res.json();
+
+
+            jokeElem.innerHTML=data.joke;
+        }
+
+    </script>
+    
+</body>
+</html>
