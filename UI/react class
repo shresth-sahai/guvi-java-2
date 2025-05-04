@@ -1,0 +1,76 @@
+import "./styles.css";
+import Navbar from "./components/Navbar";
+import { useEffect, useState } from "react";
+export default function App() {
+  const [count, setCount] = useState(0);
+  const [dogImage, setDogImage] = useState("");
+
+  const Increment = (e) => {
+    e.preventDefault();
+    setCount(count + 1);
+  };
+  const Decrement = (e) => {
+    e.preventDefault();
+    setCount(count - 1);
+  };
+  const fetchDogImage = () => {
+    fetch("https://dog.ceo/api/breeds/image/random")
+      .then((response) => response.json())
+      .then((data) => {
+        setDogImage(data.message);
+      })
+      .catch((error) => {
+        console.log("err fetching");
+      });
+  };
+
+  useEffect(() => {
+    fetchDogImage();
+  }, []);
+
+  return (
+    <div>
+      <Navbar />
+      <div style={{ backgroundColor: "blueviolet", padding: "2rem" }}>
+        <h1>Your click count : {count}</h1>
+        <div
+          style={{
+            display: "flex",
+            gap: "1.5rem",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <button onClick={Increment}> Increment </button>
+          <button onClick={Decrement}> Decrement</button>
+        </div>
+      </div>
+
+      <div>
+        <h1> DOG IMAGE</h1>
+        <br />
+        <button onClick={fetchDogImage}>Get Dog</button>
+
+        <img src={dogImage} />
+      </div>
+    </div>
+  );
+}
+/*
+React -> components
+arrange components -> make our UI 
+
+JSX -> js + HTML 
+    <>
+react fragment
+        </> 
+npx create-react-app myapp
+npm install fetch 
+
+dyanmic data -> changes in data will happen -> 
+hooks -> modern 
+useState -> state changes in components 
+useEffect -> api call and other side effect events 
+react router dom -> navigation to diff routes
+
+*/
