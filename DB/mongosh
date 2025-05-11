@@ -1,0 +1,44 @@
+[
+  {
+    "key": 1
+  },
+  {
+    "key": 2
+  }
+]
+
+// records based db -> 
+// faster 
+/// mongo query api . mongosh
+// db -> collection eg posts 
+db.posts.insertOne({
+  title:"hi",
+  body :"...",
+  likes:4
+})
+
+db.posts.insertMany([
+  {
+    "key": 1
+  },
+  {
+    "key": 2
+  }
+]
+)
+db.collection.find()
+db.collection.findOne()
+db.collection.find({},{title:1,date:1})
+db.collection.find({},{_id:1,title:1,date:1})
+// either cn be 0 or 1 1 means include in all 0 means exclude in all
+
+db.posts.updateOne({title:'1'},{$set:{likes:2}});
+
+// %eq , $ne ,$gt b,$lt etc 
+// aggregation pipelines 
+db.posts.aggregate({
+  $match:{likes:{$gt:1}}
+})
+
+
+
