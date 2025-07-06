@@ -1,0 +1,95 @@
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+/*
+
+Spring boot -> framweork 
+reactive stack -> non blocking async -> 
+it is able to handle high concurrency -> few threads 
+instead of waiting fr responses it reacts to the data as it arrives 
+
+
+
+reactive streams -> standard for async stream processing 
+
+key points 
+publisher -> publish data 
+sunscriber -> subscribes data 
+subscription 
+
+back pressure-> data over whelming should not happen 
+
+Project Reactor -> Mono <T> 
+                    Flux<T> 
+                    
+                    Spring Web Flux -> 
+                    
+  <project xmlns="http://maven.apache.org/POM/4.0.0" ...>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>spring-reactive-todo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>spring-reactive-todo</name>
+  <properties>
+    <java.version>17</java.version>
+    <spring.boot.version>3.2.0</spring.boot.version>
+  </properties>
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-webflux</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.projectreactor</groupId>
+      <artifactId>reactor-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+  
+         
+         
+         Model -> id, description, isCompleted 
+         
+         TaskRepo -> in memory -> concurrent HashMap 
+         @Repo 
+         publuc class TaskRepo {
+             
+             private final Map<Task, String > hm= new ConcurrentMap<>();
+             
+             public Flux<Task> findAll(){
+                 
+             }
+             public Mono<Task> findById(String id){
+                 
+             }
+             // .....
+         }
+                    
+                    Service 
+                    FLux and Mono 
+                    
+                    
+
+
+
+
+
+
+
+*/ 
